@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import './App.css';
 
 import { Board } from "./components/Board";
-import { ScoreBoard } from "./components/ScoreBoard"
+import { ScoreBoard } from "./components/ScoreBoard";
 import { ResetButton } from './components/ResetButton';
+
+import clicksound from './sounds/click.mp3';
 
 function App() {
 
@@ -30,7 +32,11 @@ function App() {
       } else {
         return value;
       }
-    })
+    });
+  
+    const clickSound = new Audio(clicksound);
+    clickSound.play();
+  
 
     const winner = checkWinner(updatedBoard);
 
@@ -73,7 +79,7 @@ function App() {
   return (
     <div className="App">
       <ScoreBoard scores={scores} xPlaying={xPlaying}/>
-      <Board board={board} onClick={gameOver ? resetBoard : handleBoxClick} />
+      <Board board={board} onClick={ gameOver ? resetBoard : handleBoxClick} />
       <ResetButton resetBoard={resetBoard}/>
     </div>
   );

@@ -14,13 +14,25 @@
 }
 
 .x {
-    color: rgb(255, 70, 37)
+    color: rgb(255, 37, 219)
 }
 
 .o {
-    color: rgb(44, 135, 255)
+    color: aqua;
 }
 
 .box:hover {
-    box-shadow: 0px 0px 15px #888;
+    background-color: white;
+    box-shadow: 0 0 5px aqua,
+                0 0 25px aqua,
+                0 0 50px aqua;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgb(0, 0, 0, 0.295));
+}
+
+.box:active {
+    background-color: rgb(167, 167, 167);
+    box-shadow: 0 0 5px aqua,
+                0 0 25px aqua,
+                0 0 50px aqua;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgb(0, 0, 0, 0.295));
 }
