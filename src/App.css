@@ -3,6 +3,10 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8vh;
   margin: 0;
   background-image: radial-gradient(circle, rgb(228, 5, 248), rgb(128, 8, 122), rgb(8, 185, 255));
   font-family: "Fredoka", sans-serif;
